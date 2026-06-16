@@ -1,22 +1,3 @@
-export default function Hero() {
-  return (
-    <section className="h-screen flex items-center justify-center">
-      <h1 className="text-6xl font-bold">
-        SBLM Digital Campus
-      </h1>
-    </section>
-  );
-}
-export default function Hero() {
-  return (
-    <section className="h-screen flex items-center justify-center">
-      <h1 className="text-6xl font-bold">
-        SBLM Digital Campus
-      </h1>
-    </section>
-  );
-}
-
 "use client";
 
 import { motion } from "framer-motion";

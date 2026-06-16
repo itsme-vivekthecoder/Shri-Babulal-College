@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -74,16 +74,16 @@ export default function Footer() {
           {/* Social Media */}
           <div className="flex gap-4">
             <a href="#" className="p-2 hover:bg-slate-900 rounded-lg transition">
-              <Facebook size={20} />
+              <ExternalLink size={20} />
             </a>
             <a href="#" className="p-2 hover:bg-slate-900 rounded-lg transition">
-              <Twitter size={20} />
+              <ExternalLink size={20} />
             </a>
             <a href="#" className="p-2 hover:bg-slate-900 rounded-lg transition">
-              <Linkedin size={20} />
+              <ExternalLink size={20} />
             </a>
             <a href="#" className="p-2 hover:bg-slate-900 rounded-lg transition">
-              <Instagram size={20} />
+              <ExternalLink size={20} />
             </a>
           </div>
         </div>
