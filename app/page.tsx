@@ -1,10 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
 import Footer from "@/components/layout/Footer";
-import { ArrowRight, BookOpen, Building2, GraduationCap, Library, Users, Star, Award, Users2, Zap } from "lucide-react";
+import {
+  AboutSection,
+  AcademicsSection,
+  CampusLifeSection,
+  EventsSection,
+  FAQSection,
+  AdmissionsSection,
+  FacilitiesSection,
+  FacultySection,
+  TestimonialsSection,
+  NewsSection,
+  ContactSection,
+  CtaSection,
+} from "@/components/home/Sections";
+import { BookOpen, Building2, GraduationCap, Library, Users, Users2, Zap } from "lucide-react";
 
 export default function Home() {
   const programs = [
@@ -45,6 +58,24 @@ export default function Home() {
       icon: Zap,
       title: "Tech Infrastructure",
       description: "High-speed WiFi across campus",
+    },
+  ];
+
+  const campusLifeHighlights = [
+    {
+      icon: Users,
+      title: "Student Clubs",
+      description: "Over 20 active clubs for arts, tech, sports, and culture.",
+    },
+    {
+      icon: BookOpen,
+      title: "Study Lounges",
+      description: "Quiet spaces, group study zones, and digital resource centers.",
+    },
+    {
+      icon: Zap,
+      title: "Career Support",
+      description: "Workshops, mentorship, and placement guidance for every student.",
     },
   ];
 
@@ -114,6 +145,42 @@ export default function Home() {
     },
   ];
 
+  const events = [
+    {
+      date: "June 22, 2026",
+      title: "Career Guidance Workshop",
+      location: "Auditorium A",
+      description: "Professional mentors will share tips on internships, resume building, and interview readiness.",
+    },
+    {
+      date: "June 28, 2026",
+      title: "Coding Bootcamp",
+      location: "Computer Lab 3",
+      description: "A one-day hands-on session covering web development tools and project workflows.",
+    },
+    {
+      date: "July 5, 2026",
+      title: "Cultural Evening",
+      location: "Campus Lawn",
+      description: "Music, dance, and student performances celebrating campus life and talent.",
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "How do I apply for an undergraduate program?",
+      answer: "Submit your application through the admissions office or contact us directly to begin the process.",
+    },
+    {
+      question: "What support services are available for students?",
+      answer: "We offer academic advising, career counselling, library access, and student clubs for holistic development.",
+    },
+    {
+      question: "When does the new academic year begin?",
+      answer: "The 2026-27 academic session starts in August, with orientation and registration taking place in late July.",
+    },
+  ];
+
   const admissionSteps = [
     "Visit the campus or contact the admission office.",
     "Choose your preferred program and check eligibility.",
@@ -125,119 +192,19 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-
-      {/* ABOUT SECTION */}
-      <section id="about" className="bg-white py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-teal-700">
-              About The College
-            </p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-bold text-slate-950 md:text-5xl">
-              Shri Babulal College is building a smarter digital campus.
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              The project presents a modern college website for admissions, academics, campus facilities, announcements, and student support. It is ready to grow into a full digital campus platform.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              ["2026-27", "Admissions year"],
-              ["20+", "Academic activities"],
-              ["1000+", "Students served"],
-              ["24/7", "Digital access"],
-            ].map(([value, label]) => (
-              <div
-                key={label}
-                className="rounded-lg border border-slate-200 bg-slate-50 p-6"
-              >
-                <p className="text-3xl font-bold text-slate-950">{value}</p>
-                <p className="mt-2 text-sm font-medium text-slate-600">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ACADEMICS SECTION */}
-      <section id="academics" className="bg-slate-950 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-amber-300">
-                Academics
-              </p>
-              <h2 className="mt-3 max-w-2xl text-3xl font-bold md:text-5xl">
-                Programs and learning support for every student.
-              </h2>
-            </div>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {programs.map((program, idx) => {
-              const Icon = program.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.2 }}
-                  className="rounded-lg border border-slate-700 bg-slate-900/50 p-8"
-                >
-                  <Icon className="h-12 w-12 text-amber-300" />
-                  <h3 className="mt-4 text-xl font-bold">{program.title}</h3>
-                  <p className="mt-2 text-slate-400">{program.description}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ADMISSIONS SECTION */}
-      <section id="admissions" className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-teal-700">
-            Admissions Process
-          </p>
-          <h2 className="mt-3 max-w-2xl text-3xl font-bold text-slate-950 md:text-5xl">
-            Simple steps to join our community.
-          </h2>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
-            {admissionSteps.map((step, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: idx * 0.1 }}
-                className="rounded-lg border-2 border-teal-200 bg-teal-50 p-6"
-              >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-teal-700 text-white font-bold">
-                  {idx + 1}
-                </div>
-                <p className="text-slate-700">{step}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section className="bg-slate-950 py-20 text-center">
-        <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl font-bold text-white md:text-5xl">
-            Ready to Transform Your Future?
-          </h2>
-          <p className="mt-6 text-lg text-slate-300">
-            Join Shri Babulal College and be part of a thriving academic community.
-          </p>
-          <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-yellow-400 px-8 py-4 font-semibold text-slate-900 shadow-xl transition hover:scale-105">
-            Start Your Journey <ArrowRight className="h-5 w-5" />
-          </button>
-        </div>
-      </section>
+      <AboutSection />
+      <AcademicsSection programs={programs} />
+      <CampusLifeSection highlights={campusLifeHighlights} />
+      <AdmissionsSection admissionSteps={admissionSteps} />
+      <FacilitiesSection facilities={facilities} />
+      <FacultySection faculty={faculty} />
+      <TestimonialsSection testimonials={testimonials} />
+      <NewsSection news={news} />
+      <EventsSection events={events} />
+      <FAQSection faqs={faqs} />
+      <ContactSection />
+      <CtaSection />
+      <Footer />
     </>
   );
 }

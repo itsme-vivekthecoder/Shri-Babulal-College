@@ -24,21 +24,21 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#about" className="hover:text-white transition">About Us</a></li>
-              <li><a href="#academics" className="hover:text-white transition">Academics</a></li>
-              <li><a href="#facilities" className="hover:text-white transition">Facilities</a></li>
-              <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
+              <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+              <li><a href="/courses" className="hover:text-white transition">Courses</a></li>
+              <li><a href="/admissions" className="hover:text-white transition">Admissions</a></li>
+              <li><a href="/staff-directory" className="hover:text-white transition">Staff</a></li>
             </ul>
           </div>
 
           {/* Programs */}
           <div>
-            <h4 className="font-bold mb-4">Programs</h4>
+            <h4 className="font-bold mb-4">Pages</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-white transition">Engineering</a></li>
-              <li><a href="#" className="hover:text-white transition">Science</a></li>
-              <li><a href="#" className="hover:text-white transition">Commerce</a></li>
-              <li><a href="#" className="hover:text-white transition">Arts</a></li>
+              <li><a href="/news" className="hover:text-white transition">News & Events</a></li>
+              <li><a href="/testimonials" className="hover:text-white transition">Testimonials</a></li>
+              <li><a href="/#faq" className="hover:text-white transition">FAQs</a></li>
+              <li><a href="/#contact" className="hover:text-white transition">Contact</a></li>
             </ul>
           </div>
 

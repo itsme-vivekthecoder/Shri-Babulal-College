@@ -53,12 +53,18 @@ export default function Hero() {
           transition={{ delay: 0.8 }}
           className="mt-10 flex flex-col justify-center gap-4 sm:flex-row"
         >
-          <button className="rounded-full bg-yellow-400 px-8 py-4 font-semibold text-slate-900 shadow-xl transition hover:scale-105">
+          <a
+            href="#academics"
+            className="rounded-full bg-yellow-400 px-8 py-4 font-semibold text-slate-900 shadow-xl transition hover:scale-105"
+          >
             Explore Programs
-          </button>
-          <button className="rounded-full border border-white/20 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition hover:bg-white/20">
+          </a>
+          <a
+            href="#events"
+            className="rounded-full border border-white/20 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+          >
             Virtual Campus Tour
-          </button>
+          </a>
         </motion.div>
 
         {/* Scroll Indicator */}
