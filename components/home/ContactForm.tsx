@@ -324,8 +324,8 @@ export function ContactForm() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.25 }}
-        whileHover={!status === "loading" && isFormValid ? { scale: 1.02 } : {}}
-        whileTap={!status === "loading" && isFormValid ? { scale: 0.98 } : {}}
+        whileHover={status !== "loading" && isFormValid ? { scale: 1.02 } : {}}
+        whileTap={status !== "loading" && isFormValid ? { scale: 0.98 } : {}}
         className={`w-full rounded-lg px-6 py-3 font-semibold text-white transition flex items-center justify-center gap-2 ${
           isFormValid && status !== "loading"
             ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
